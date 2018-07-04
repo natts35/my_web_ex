@@ -7,7 +7,7 @@ pipeline {
     
     stages {
        stage('Package') { 
-          agent mgr1
+          agent {mgr1}
           steps {
               sh "docker --version"
               sh "docker build -t ${imageName} ."
