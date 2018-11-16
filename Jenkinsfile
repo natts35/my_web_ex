@@ -24,7 +24,7 @@ pipeline {
        stage('Deploy') { 
           agent {label 'mgr1'}
           steps {
-           sh "docker service create --replicas 2 --name my_web_ex --constraint "node.role != manager" --publish 9090:80 ${imageName}:latest"
+           sh "echo h"
           }
        }
     }
